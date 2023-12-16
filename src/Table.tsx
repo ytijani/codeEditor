@@ -1,5 +1,8 @@
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material.css'
+import 'codemirror/mode/xml/xml'
+import 'codemirror/mode/javascript/javascript'
+
 import {UnControlled as CodeMirror} from 'react-codemirror2'
 import React from 'react';
 
@@ -15,25 +18,26 @@ const Table: React.FC<TableProps> = (props : TableProps) => {
 
     const { displayName, onChange, value, image, lang } = props;
 
-    const handleChange = (editor: any, data: any, value: any) => {
-        onChange(value);
-    }
     return (
         <>
-            <div className="text-[13px] text-[#a8acb9] flex items-center bg-[#000] gap-[10px] p-[8px] mt-[10px]">
+            <div className="text-[13px] text-[#a8acb9] flex items-center bg-[#000] gap-[10px] z-10">
                 <img className="w-[13px] h-[13px]" src={image} alt="" />
                 <h1 className="">{displayName}</h1>
             </div>
             <CodeMirror
-             onBeforeChange={handleChange}
-              value={value} className="pl-[10px] w-[100%] h-[26%] outline-none"
-               options={{
+              value={value}
+               className=""
+                options={{
                 lineWrapping: true,
                 lint: true,
                 mode: lang,
                 theme: 'material',
                 lineNumbers: true,
-            }}>
+            }}
+            onChange={(editor, data, value) => {
+                onChange(value);
+            }}
+            >
             </CodeMirror>
         </>
     )
