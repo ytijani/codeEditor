@@ -27,9 +27,9 @@ function App() {
   return (
     <div className="h-[100vh] w-[100vw] flex gap-[16px] justify-center items-center mx-auto">
       <div className="w-[40%] flex flex-col justify-center h-[100%] ">
-        <Table displayName="HTML" onChange={setHtml} value={html} image={HTML} />
-        <Table displayName="CSS" onChange={setCss} value={css} image={CSS} />
-        <Table displayName="JS" onChange={setJs} value={js} image={JAVASCRIPT} />
+        <Table displayName="HTML" onChange={setHtml} value={html} image={HTML} lang="xml"/>
+        <Table displayName="CSS" onChange={setCss} value={css} image={CSS} lang="css"/>
+        <Table displayName="JS" onChange={setJs} value={js} image={JAVASCRIPT}  lang="javascript"/>
       </div>
       <div className="w-[43%] bg-[#eee] h-[53.3em]">
         <h1 className="bg-[#000] text-[#a8acb9] py-[8px] text-center text-[20px]">Output</h1>
