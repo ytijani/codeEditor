@@ -28,7 +28,7 @@ const Table: React.FC<TableProps> = (props : TableProps) => {
               value={value}
                className=""
                 options={{
-                lineWrapping: true,
+                // lineWrapping: true,
                 lint: true,
                 mode: lang,
                 theme: 'material',

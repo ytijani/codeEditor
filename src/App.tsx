@@ -33,7 +33,7 @@ function App() {
       </div>
       <div className="w-[100%] h-[94%] bg-[#eee]">
         <h1 className="bg-[#000] text-[#a8acb9] py-[8px] text-center text-[20px]">Output</h1>
-        <iframe srcDoc={srcDoc} title="output" sandbox="allow-scripts" className="w-[100%] h-[100%]"/>
+        <iframe srcDoc={srcDoc} title="output" sandbox="allow-scripts" width="100%" height="100%"/>
       </div>
     </div>
   )
