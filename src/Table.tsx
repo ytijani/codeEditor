@@ -4,7 +4,6 @@ import 'codemirror/mode/xml/xml'
 import 'codemirror/mode/javascript/javascript'
 
 import {UnControlled as CodeMirror} from 'react-codemirror2'
-import React from 'react';
 
 interface TableProps {
     displayName: string;
@@ -34,7 +33,7 @@ const Table: React.FC<TableProps> = (props : TableProps) => {
                 theme: 'material',
                 lineNumbers: true,
             }}
-            onChange={(editor, data, value) => {
+            onChange={(value) => {
                 onChange(value);
             }}
             >
