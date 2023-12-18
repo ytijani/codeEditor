@@ -34,8 +34,10 @@ const Table: React.FC<TableProps> = (props : TableProps) => {
                 theme: 'material',
                 lineNumbers: true,
             }}
+            // @ts-ignore
             onChange={(editor, data,value) => {
                 onChange(value);
+
             }}
             >
             </CodeMirror>
